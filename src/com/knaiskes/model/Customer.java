@@ -1,10 +1,13 @@
 package com.knaiskes.model;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Customer {
     private String name;
     private String lastName;
     private String password;
-    private double balance; // Could be changed to some other type in order to store bigger numbers
+    private double balance; // Could be changed to some other data type in order to store bigger numbers
 
     public Customer(String name, String lastName, String password, double balance) {
         this.name = name;
