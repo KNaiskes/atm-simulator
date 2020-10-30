@@ -6,12 +6,14 @@ import java.util.Map;
 public class Customer {
     private String name;
     private String lastName;
+    private String email;
     private String password;
     private double balance; // Could be changed to some other data type in order to store bigger numbers
 
-    public Customer(String name, String lastName, String password, double balance) {
+    public Customer(String name, String lastName, String email, String password, double balance) {
         this.name = name;
         this.lastName = lastName;
+        this.email = email;
         this.password = password;
         this.balance = balance;
     }
@@ -23,6 +25,8 @@ public class Customer {
     public String getLastName() {
         return lastName;
     }
+
+    public String getEmail() { return email; }
 
     public String getPassword() {
         return password;
