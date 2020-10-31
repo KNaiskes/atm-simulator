@@ -13,7 +13,6 @@ public class FakeDB {
     public boolean customerExists(Customer customer) {
         try {
             if (!this.customersList.containsKey(customer.getEmail())) {
-                System.out.println("Here?");
                 return false;
             }
         }
@@ -24,9 +23,7 @@ public class FakeDB {
     }
 
     public void addCustomer(Customer customer) {
-        this.customersList.put(customer.getEmail(), customer);
-
-        if (this.customerExists(customer) == false) {
+        if (!this.customerExists(customer)) {
             this.customersList.put(customer.getEmail(), customer);
         }
         else {
