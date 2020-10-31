@@ -11,6 +11,6 @@ public class FakeDB {
     public FakeDB() {}
 
     public void addCustomer(Customer customer) {
-        this.customersList.put(customer.getName(), customer);
+        this.customersList.put(customer.getEmail(), customer);
     }
 }
