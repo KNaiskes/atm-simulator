@@ -15,6 +15,5 @@ public class Main {
 
         fakeDB.addCustomer(customer);
         fakeDB.addCustomer(customer2);
-
     }
 }
