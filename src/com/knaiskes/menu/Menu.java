@@ -18,8 +18,8 @@ public class Menu {
         return selectOption;
     }
 
-    public void setSelectOption(int sellectOption) {
-        this.selectOption = sellectOption;
+    public void setSelectOption(int selectOption) {
+        this.selectOption = selectOption;
     }
 
     public void getCustomerOption() {
