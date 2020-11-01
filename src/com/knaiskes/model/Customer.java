@@ -36,6 +36,10 @@ public class Customer {
         return balance;
     }
 
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
     public void print_customer(Customer customer) {
         System.out.println(customer.getName());
         System.out.println(customer.getLastName());

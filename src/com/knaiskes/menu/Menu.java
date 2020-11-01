@@ -31,7 +31,7 @@ public class Menu {
         }
         System.out.print("> ");
         try {
-            selectOption = in.nextInt();;
+            selectOption = in.nextInt();
             this.setSelectOption(selectOption);
 
             switch(this.getSelectOption()) {
