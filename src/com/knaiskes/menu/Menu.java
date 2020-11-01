@@ -33,7 +33,27 @@ public class Menu {
         try {
             selectOption = in.nextInt();;
             this.setSelectOption(selectOption);
-            System.out.println("Here: " + this.getSelectOption());
+
+            switch(this.getSelectOption()) {
+                case 1:
+                    System.out.println("Withdraw");
+                    // Call withdraw function
+                    break;
+                case 2:
+                    System.out.println("Deposit");
+                    // Call deposit function
+                    break;
+                case 3:
+                    System.out.println("View Balance");
+                    // Call viewBalance function
+                    break;
+                case 4:
+                    System.out.println("Change password");
+                    // Call changePassword function
+                    break;
+                default:
+                    System.out.println(this.getSelectOption() + " is not a valid option");
+            }
         } catch (InputMismatchException e) {
             System.out.println("Input must be an integer");
             this.getCustomerOption();
