@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 public class Menu {
     private String[] options = {
-            "1: Withdraw money from your account",
-            "2: Deposit money to your account",
-            "3: View your balance",
-            "4: Change your password"
+            "Withdraw money from your account",
+            "Deposit money to your account",
+            "View your balance",
+            "Change your password"
     };
     private int selectOption;
 
@@ -27,7 +27,7 @@ public class Menu {
 
         System.out.println("Select your option by entering its number");
         for (int i = 0; i < options.length; i++) {
-            System.out.println(options[i]);
+            System.out.println(i+1 + ": " +options[i]);
         }
         System.out.print("> ");
         try {
