@@ -32,6 +32,41 @@ public class FakeDB {
         }
     }
 
+    public Customer login() {
+        Customer loginCustomer = new Customer();
+
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Enter your email");
+        System.out.print("> ");
+        String getEmail = in.nextLine();
+        // TODO: catch input exception
+        loginCustomer.setEmail(getEmail);
+
+        if (!this.customerExists(loginCustomer)){
+            System.out.println("There is no user with such email");
+            return null;
+        }
+
+        loginCustomer = this.customersList.get(getEmail); // get all values of the actual customer
+
+        System.out.print("Enter your password ");
+        System.out.print("> ");
+        // TODO: catch input exception
+        String getPassword = in.nextLine();
+
+        // Could limit the number of tries and lock the account
+        while(!loginCustomer.getPassword().equals(getPassword)) {
+            System.out.println("Your password is incorrect");
+            System.out.println("Try again or enter 'exit' to exit ");
+            System.out.print("> ");
+
+            getPassword = in.nextLine();
+            if (getPassword.equals("exit")) return null;
+        }
+        return loginCustomer;
+    }
+
     public void withdraw(Customer customer) {
         if (customer.getBalance() == 0) {
             System.out.println("Sorry, your account is empty!");

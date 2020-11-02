@@ -15,10 +15,17 @@ public class Main {
 
         Customer customer = new Customer( "Kiriakos", "Naiskes", "somemail@example.com","123", 100.43);
         Customer customer2 = new Customer( "Frodo", "Baggins", "frodo@example.com" ,"the one ring", 50.43);
+        Customer loginCustomer = new Customer();
 
         fakeDB.addCustomer(customer);
         fakeDB.addCustomer(customer2);
 
-        menu.getCustomerOption();
+        loginCustomer = fakeDB.login();
+
+        if (loginCustomer != null) {
+            System.out.println("Welcome");
+        }
+
+        // menu.getCustomerOption();
     }
 }
