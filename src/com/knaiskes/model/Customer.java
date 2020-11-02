@@ -18,6 +18,8 @@ public class Customer {
         this.balance = balance;
     }
 
+    public Customer() {}
+
     public String getName() {
         return name;
     }
@@ -38,6 +40,14 @@ public class Customer {
 
     public void setBalance(double balance) {
         this.balance = balance;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public void print_customer(Customer customer) {
