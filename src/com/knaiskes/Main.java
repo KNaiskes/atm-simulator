@@ -19,13 +19,11 @@ public class Main {
 
         fakeDB.addCustomer(customer);
         fakeDB.addCustomer(customer2);
-
+        
         loginCustomer = fakeDB.login();
 
         if (loginCustomer != null) {
-            System.out.println("Welcome");
+            menu.getCustomerOption();
         }
-
-        // menu.getCustomerOption();
     }
 }
