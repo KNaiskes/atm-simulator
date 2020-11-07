@@ -1,5 +1,7 @@
 package com.knaiskes.menu;
 
+import com.knaiskes.model.Customer;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -22,7 +24,7 @@ public class Menu {
         this.selectOption = selectOption;
     }
 
-    public void getCustomerOption() {
+    public void getCustomerOption(Customer customer) {
         Scanner in = new Scanner(System.in);
 
         System.out.println("Select your option by entering its number");
@@ -56,7 +58,7 @@ public class Menu {
             }
         } catch (InputMismatchException e) {
             System.out.println("Input must be an integer");
-            this.getCustomerOption();
+            this.getCustomerOption(customer);
         }
     }
 }

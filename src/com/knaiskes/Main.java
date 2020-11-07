@@ -21,7 +21,7 @@ public class Main {
         loginCustomer = fakeDB.login();
 
         if (loginCustomer != null) {
-            menu.getCustomerOption();
+            menu.getCustomerOption(loginCustomer);
         }
     }
 }
