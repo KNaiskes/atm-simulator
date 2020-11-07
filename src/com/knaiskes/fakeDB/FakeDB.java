@@ -83,10 +83,9 @@ public class FakeDB {
 
             char tryAgain = in.next().charAt(0);
             if (tryAgain == 'n' || tryAgain == 'N') return;
-            else withdrawAmount = in.nextInt();
-
-            while(tryAgain != 'y' || tryAgain != 'Y' || tryAgain != 'n' || tryAgain != 'N') {
-                System.out.println("Do you want to try again? : Y/N");
+            else if (tryAgain == 'y' || tryAgain == 'Y') {
+                System.out.println("How much money would you like to withdraw ? :");
+                withdrawAmount = in.nextInt();
             }
         }
 
