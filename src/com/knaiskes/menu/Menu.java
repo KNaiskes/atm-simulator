@@ -1,5 +1,6 @@
 package com.knaiskes.menu;
 
+import com.knaiskes.fakeDB.FakeDB;
 import com.knaiskes.model.Customer;
 
 import java.util.InputMismatchException;
@@ -25,6 +26,8 @@ public class Menu {
     }
 
     public void getCustomerOption(Customer customer) {
+        FakeDB fakeDB = new FakeDB();
+
         Scanner in = new Scanner(System.in);
 
         System.out.println("Select your option by entering its number");
@@ -39,7 +42,7 @@ public class Menu {
             switch(this.getSelectOption()) {
                 case 1:
                     System.out.println("Withdraw");
-                    // Call withdraw function
+                    fakeDB.withdraw(customer);
                     break;
                 case 2:
                     System.out.println("Deposit");
