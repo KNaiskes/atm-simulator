@@ -4,8 +4,6 @@ import com.knaiskes.fakeDB.FakeDB;
 import com.knaiskes.menu.Menu;
 import com.knaiskes.model.Customer;
 
-import java.util.HashMap;
-import java.util.Map;
 
 public class Main {
 
