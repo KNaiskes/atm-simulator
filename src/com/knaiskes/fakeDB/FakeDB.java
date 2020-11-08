@@ -93,4 +93,18 @@ public class FakeDB {
 
         System.out.println("Your new balance is: " + customer.getBalance());
     }
+
+    public void deposit(Customer customer){
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("How much would you like to deposit in your account ? :");
+        int depositAmount = in.nextInt();
+
+        while (depositAmount <= 0) {
+            System.out.println("Please, enter an amount of money greater than 0");
+            depositAmount = in.nextInt();
+        }
+        customer.setBalance(customer.getBalance() + depositAmount);
+        System.out.println("Your new balance is: " + customer.getBalance());
+    }
 }

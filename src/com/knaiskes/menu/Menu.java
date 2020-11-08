@@ -46,7 +46,7 @@ public class Menu {
                     break;
                 case 2:
                     System.out.println("Deposit");
-                    // Call deposit function
+                    fakeDB.deposit(customer);
                     break;
                 case 3:
                     System.out.println("View Balance");
