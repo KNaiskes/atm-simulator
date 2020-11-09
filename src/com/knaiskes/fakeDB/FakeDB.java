@@ -107,4 +107,8 @@ public class FakeDB {
         customer.setBalance(customer.getBalance() + depositAmount);
         System.out.println("Your new balance is: " + customer.getBalance());
     }
+
+    public void viewBalance(Customer customer) {
+        System.out.println(customer.getBalance());
+    }
 }
