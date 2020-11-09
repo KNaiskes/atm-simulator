@@ -111,4 +111,39 @@ public class FakeDB {
     public void viewBalance(Customer customer) {
         System.out.println(customer.getBalance());
     }
+
+    public void changePassword(Customer customer) {
+        // This method does not really change the password
+        // as it is not used a real database in this project
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Please enter your current password: ");
+        String currentPassword = in.nextLine();
+
+        while(!currentPassword.equals(customer.getPassword())) {
+            // Could use a for loop instead to limit the number of tries
+            System.out.println("Your password is not correct");
+            System.out.print("Please, try again: ");
+            currentPassword = in.nextLine();
+        }
+
+        System.out.println("Enter your new password: ");
+        String newPassword = in.nextLine();
+
+        System.out.println("Enter again your new password");
+        String confirmPassword = in.nextLine();
+
+        while (!newPassword.equals(confirmPassword)) {
+            System.out.println("Password do not match");
+            System.out.println("Please, try again: ");
+
+            System.out.println("Enter your new password: ");
+            newPassword = in.nextLine();
+
+            System.out.println("Enter again your new password");
+            confirmPassword = in.nextLine();
+        }
+        customer.setPassword(confirmPassword);
+        System.out.println("Your new password is: " + customer.getPassword());
+    }
 }

@@ -54,7 +54,7 @@ public class Menu {
                     break;
                 case 4:
                     System.out.println("Change password");
-                    // Call changePassword function
+                    fakeDB.changePassword(customer);
                     break;
                 default:
                     System.out.println(this.getSelectOption() + " is not a valid option");
