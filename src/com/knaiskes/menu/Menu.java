@@ -50,7 +50,7 @@ public class Menu {
                     break;
                 case 3:
                     System.out.println("View Balance");
-                    // Call viewBalance function
+                    fakeDB.viewBalance(customer);
                     break;
                 case 4:
                     System.out.println("Change password");
