@@ -40,3 +40,17 @@ In IntelliJ find project by clicking File > Open... in the top menu
 ### Build and run
 
 Click in the top menu Run > Run Main or press Shift + F10
+
+## Available options
+
+- Withdraw
+- Deposit
+- View available balance
+- Change password (does not really change user's password as it is not used a
+real database)
+
+## Database
+
+This project *does not* use any real database as it would be out of its scope.
+Instead a HashMap is used as a "fake" database as result the lookup (search)
+complexity is O(1).
