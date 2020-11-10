@@ -15,7 +15,7 @@ public class Customer {
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.balance = balance;
+        this.balance = Math.round(balance * 100.0) / 100.0;
     }
 
     public Customer() {}
